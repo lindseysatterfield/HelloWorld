@@ -6,32 +6,39 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Howdy Y'all!!");
-            //Console.ReadKey(); // What happens if you run the app without this line?
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello {name}!");
 
             var animals = new string[] { "Triceratops", "Gorilla", "Corgi", "Toucan" };
 
             foreach (var animal in animals)
             {
-                //Console.WriteLine(animal);
                 if (animal.Length >= 5)
                 {
                     Console.WriteLine(animal);
                 }
             }
-
-            var greeting = "southern, british, australian";
+;
             Console.WriteLine("Pick from three greetings: southern, british, australian");
+            string greeting;
             greeting = Console.ReadLine();
-            //if (greeting == "british")
-            //{
-            //    Console.WriteLine("allo!");
-            //} else if (greeting == "australian")
-            //{
-            //    Console.WriteLine("good day mate");
-            //} else if (greeting == "southern") {
-            //    Console.WriteLine("hey yall");
-            //}
+
+            switch (greeting)
+            {
+                case "southern":
+                    Console.WriteLine("hey y'all!");
+                    break;
+                case "british":
+                    Console.WriteLine("Cheerio");
+                    break;
+                case "australian":
+                    Console.WriteLine("Good day mate!");
+                    break;
+                default:
+                    break;
+            }
+           
         }
     }
 }
